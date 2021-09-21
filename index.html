@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0;">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+   <link rel="stylesheet" href="style.css">
+   <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+	<title>
+		IP Tracker
+	</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+</head>
+<body>
+	<div class ="back-img"></div>
+	<div class="result-wrap">
+		<h1> IP Address Tracker </h1>
+		<div class="search-line">
+			<input type="text" id="myIP" placeholder="Type IP..." >  
+			<button id="myBtn" onclick = "goTrack()">
+				<svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
+			</button>
+		</div>
+		<div class="search-results">
+			<div class="row-1">
+				<div class="box">
+					<h5> IP ADDRESS </h5>
+					<p><span id="ip-here"></span></p>
+				</div>
+				<div class="box">
+					<h5> LOCATION </h5>
+					<p><span id="city-here"></span>, <span id="reg-here"></span> </br> <span id="postal-here"></span>  </p>
+				</div>
+			</div>
+			<div class="row-1">
+				<div class="box">
+					<h5> TIMEZONE </h5>
+					<p><span id="time-here"></span></p>
+				</div>
+				<div class="box">
+					<h5> ISP </h5>
+					<p> <span id="isp-here"></span></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="mapid"></div>
+	<script src="script.js"></script>
+	<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+</body>
+</html>
