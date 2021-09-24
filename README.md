@@ -23,6 +23,5 @@ I have practiced fetching from API and learnt how to use GeoIPify API and how to
 
 ### :camera: Screenshot
 ![image](https://user-images.githubusercontent.com/47024219/133368625-18b448e7-da1b-46e4-b47f-276a4808836d.png)
-![image](https://user-images.githubusercontent.com/47024219/133368671-bd1197ae-a5f5-4228-ad4d-f319065e07b6.png)
 
 
